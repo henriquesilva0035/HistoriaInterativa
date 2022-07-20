@@ -31,7 +31,7 @@ public class App {
 
         if (escolha == 1) {
 
-            System.out.println("Humm vejo que a casa que mais se encaixa com você é ifinória!");
+            System.out.println("Humm vejo que a casa que mais se encaixa com você é Grifinória!");
             // essa if 1 e ja é o final 1
 
         } else if (escolha == 2) {
