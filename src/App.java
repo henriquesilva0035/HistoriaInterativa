@@ -31,13 +31,13 @@ public class App {
 
         if (escolha == 1) {
 
-            System.out.println("Humm vejo que a casa que mais se encaixa com você é Grifinória!");
+            System.out.println("Humm vejo que a casa que mais se encaixa com você é ifinória!");
             // essa if 1 e ja é o final 1
 
         } else if (escolha == 2) {
             System.out.println("Bom ainda nao consigo te encaixar em uma casa, vamos tentar mais uma vez");
 
-            // daqui pra baixo começa a 2 parte
+            // daqui pra baixo começa a 2 parte junto com os 2 finais
             System.out.println(
                     "\n são dedicados, pacientes e honestos. Suas admiráveis características os tornam trabalhadores árduos e modestos, sendo receptivos a todos os demais tipos de bruxos.");
             System.out.println("\n por outro lado, o excesso dessas qualidades pode se tornar um ponto negativo");
