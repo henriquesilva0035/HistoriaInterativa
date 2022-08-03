@@ -14,10 +14,10 @@ public class Personagem {
 
         if (alteracao > 0) {
             System.out.println(
-                    "Como decorrência dessa ação," + this.nome + "Recupera" + alteracao + " pontos de energia");
+                    "Como decorrência dessa ação," + this.nome + " Ganha" + alteracao + " pontos de energia");
         } else {
             System.out
-                    .println("Como decorrência dessa ação," + this.nome + "Perdeu" + alteracao + " pontos de energia");
+                    .println("Como decorrência dessa ação," + this.nome + " Perdeu" + alteracao + " pontos de energia");
         }
 
         if (this.energia > 100) {
