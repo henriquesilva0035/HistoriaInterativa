@@ -47,7 +47,7 @@ public class Capitulo {
         if (escolhas != null) {
  
             while (idEscolha == -1) {
-                System.out.println("Digite sua Escolha: ");
+                System.out.println("Digite sua Escolha:  ");
                 String escolhaDigitada = escaneador.nextLine();
  
                 for (int i = 0; i < escolhas.length; i++) {
