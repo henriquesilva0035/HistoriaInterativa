@@ -1,16 +1,15 @@
 import java.util.Scanner;
-
+ 
 public class App {
-
+ 
         // static Scanner escaneador;
-
+ 
         public static void main(String[] args) {
-
+ 
                 Scanner escaneador = new Scanner(System.in);
-
+ 
                 Personagem neon = new Personagem("Neon", 100);
                 Personagem sova = new Personagem("Sova", 100);
-
                 // Conteudo do Livro
                 // Capitulo1
                 Capitulo capitulo1 = new Capitulo(
@@ -25,14 +24,13 @@ public class App {
                                                 + " percebe que estão muito longe de casa e avisa ao " + sova.nome +
                                                 " que fica assustado ao perceber, eles se separam para tentar achar o caminho, "
                                                 + sova.nome + " grita falando que encontrou o caminho.",
-                                "continuar onde esta",
-                                "ir ate o sova",
+                                                new String[]{"continuar onde esta","ir ate o sova"},
                                 neon,
                                 0,
                                 escaneador);
-
+ 
                 // Capitulo 2
-
+ 
                 Capitulo capitulo2 = new Capitulo(neon.nome + " Ignorando o Sova", neon.nome
                                 + " prefere ficar onde estar e tenta achar algum sinal da trilha por onde eles vinheram, depois de muito procurar "
                                 +
@@ -43,13 +41,12 @@ public class App {
                                 "\n" + neon.nome + ":" + " encontrei a trilha veja, sao suas pegadas" +
                                 " Eles seguem a trilha encontrada e conseguem chegar na Vila. FIm.",
                                 null,
-                                null,
                                 neon,
                                 0,
                                 escaneador);
-
+ 
                 // Capitulo 3
-
+ 
                 Capitulo capitulo3 = new Capitulo(neon.nome + " Vai ate o Sova", "\n" + neon.nome + " Chega onde o  "
                                 + sova.nome
                                 + " esta e ele lhe mostra uma trilha" +
@@ -63,12 +60,12 @@ public class App {
                                 + " fala para a " + neon.nome + " \n" + sova.nome + ":" +
                                 " o que acha de explorar essa caverna? ver o que tem no final dela." +
                                 "\n",
-                                "explorar a caverna",
-                                "sair da caverna",
+                                new String[]{"explorar a caverna",
+                                "sair da caverna"},
                                 neon,
                                 0,
                                 escaneador);
-
+ 
                 // Capitulo 4
                 Capitulo capitulo4 = new Capitulo(" Explorando a caverna ", sova.nome + " e " + neon.nome
                                 + " Exploram a Caverna, " + sova.nome
@@ -77,9 +74,9 @@ public class App {
                                 + "pede para ele parar, ele nao para e logo em seguida um monte de Morcego vem na direção deles"
                                 +
                                 sova.nome + " se assusta e ao tentar correr escorrega e cai, o mesmo fica machucado",
-                                null, null, sova, -35,
+                                null, sova, -35,
                                 escaneador);
-
+ 
                 // Capitulo 5
                 Capitulo capitulo5 = new Capitulo(" Saindo em segurança", "Apos a chuva passar " + neon.nome + " e "
                                 + sova.nome
@@ -87,40 +84,40 @@ public class App {
                                 "o " + sova.nome + " grita alto, Cuidadooo " + neon.nome
                                 + " uma pedra se desloca da caverna e iria atingir a " + neon.nome + " se nao fosse " +
                                 "avisada a tempo" + neon.nome + " Toma um belo susto mas logo agradece ao " + sova.nome
-                                + "por ter avisado", null, null, sova, +35,
+                                + "por ter avisado", null, sova, +35,
                                 escaneador);
-
+ 
                 // Execução do livro (Lógica)
                 //
-
+ 
                 capitulo1.mostrar();
                 int escolha = capitulo1.escolher();
-
-                if (escolha == 1) {
-
+ 
+                if (escolha == 0) {
+ 
                         capitulo2.mostrar();
-
+ 
                 }
-
-                else if (escolha == 2)
-
+ 
+                else if (escolha == 1)
+ 
                 {
                         capitulo3.mostrar();
                         escolha = capitulo3.escolher();
-
-                        if (escolha == 1) {
-
+ 
+                        if (escolha == 0) {
+ 
                                 capitulo4.mostrar();
-
+ 
                         }
-
-                        if (escolha == 2) {
-
+ 
+                        if (escolha == 1) {
+ 
                                 capitulo5.mostrar();
-
+ 
                         }
                 }
                 escaneador.close();
         }
-
+ 
 }
