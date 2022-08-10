@@ -14,7 +14,7 @@ public class App {
                 // Capitulo1
                 Capitulo capitulo1 = new Capitulo(
                                 "O inicio de tudo", neon.nome + " e " + sova.nome
-                                                + " Moram em Runeterra desde pequenos, sao amigos inseparados" +
+                                                + " Moram em Runeterra desde pequenos, sao amigos inseparáveis" +
                                                 "ambos da mesma idade" + ","
                                                 + "sempre estão juntos em alguma aventura pelo seu vilarejo." +
                                                 "\n Certo dia ambos resolvem sair pela vila para brincar, nesse dia se afastaram muito da vila oque era pessimo"
@@ -61,7 +61,7 @@ public class App {
                                 " o que acha de explorar essa caverna? ver o que tem no final dela." +
                                 "\n",
                                 new String[]{"explorar a caverna",
-                                "sair da caverna"},
+                                "sair da caverna", "esperar por ajuda"},
                                 neon,
                                 0,
                                 escaneador);
@@ -71,7 +71,7 @@ public class App {
                                 + " Exploram a Caverna, " + sova.nome
                                 + " começa a gritar na caverna por causa do eco e acha divertido a " +
                                 neon.nome
-                                + "pede para ele parar, ele nao para e logo em seguida um monte de Morcego vem na direção deles"
+                                + "pede para ele parar, ele nao para e logo em seguida um monte de Morcegos vem na direção deles"
                                 +
                                 sova.nome + " se assusta e ao tentar correr escorrega e cai, o mesmo fica machucado",
                                 null, sova, -35,
