@@ -24,7 +24,7 @@ public class App {
                                                 + " percebe que estão muito longe de casa e avisa ao " + sova.nome +
                                                 " que fica assustado ao perceber, eles se separam para tentar achar o caminho, "
                                                 + sova.nome + " grita falando que encontrou o caminho.",
-                                                new String[]{"continuar onde esta","ir ate o sova"},
+                                               
                                 neon,
                                 0,
                                 escaneador);
@@ -40,7 +40,7 @@ public class App {
                                 "\n" + sova.nome + ":" + " O que houve" +
                                 "\n" + neon.nome + ":" + " encontrei a trilha veja, sao suas pegadas" +
                                 " Eles seguem a trilha encontrada e conseguem chegar na Vila. FIm.",
-                                null,
+                                
                                 neon,
                                 0,
                                 escaneador);
@@ -60,8 +60,7 @@ public class App {
                                 + " fala para a " + neon.nome + " \n" + sova.nome + ":" +
                                 " o que acha de explorar essa caverna? ver o que tem no final dela." +
                                 "\n",
-                                new String[]{"explorar a caverna",
-                                "sair da caverna", "esperar por ajuda"},
+                                
                                 neon,
                                 0,
                                 escaneador);
@@ -74,7 +73,7 @@ public class App {
                                 + "pede para ele parar, ele nao para e logo em seguida um monte de Morcegos vem na direção deles"
                                 +
                                 sova.nome + " se assusta e ao tentar correr escorrega e cai, o mesmo fica machucado",
-                                null, sova, -35,
+                                sova, -35,
                                 escaneador);
  
                 // Capitulo 5
@@ -84,39 +83,24 @@ public class App {
                                 "o " + sova.nome + " grita alto, Cuidadooo " + neon.nome
                                 + " uma pedra se desloca da caverna e iria atingir a " + neon.nome + " se nao fosse " +
                                 "avisada a tempo" + neon.nome + " Toma um belo susto mas logo agradece ao " + sova.nome
-                                + "por ter avisado", null, sova, +35,
+                                + "por ter avisado",  sova, +35,
                                 escaneador);
- 
+                
+
+                //Escolhas
+                capitulo1.escolhas.add(new Escolha( "continuar onde esta", capitulo2));
+                capitulo1.escolhas.add(new Escolha( "ir ate o sova", capitulo3));
+                capitulo3.escolhas.add(new Escolha( "explorar a caverna", capitulo4));
+                capitulo3.escolhas.add(new Escolha( "sair da caverna", capitulo5));
+               
+                Capitulo raiz = capitulo1;
+                
+
+
+
                 // Execução do livro (Lógica)
-                //
- 
-                capitulo1.mostrar();
-                int escolha = capitulo1.escolher();
- 
-                if (escolha == 0) {
- 
-                        capitulo2.mostrar();
- 
-                }
- 
-                else if (escolha == 1)
- 
-                {
-                        capitulo3.mostrar();
-                        escolha = capitulo3.escolher();
- 
-                        if (escolha == 0) {
- 
-                                capitulo4.mostrar();
- 
-                        }
- 
-                        if (escolha == 1) {
- 
-                                capitulo5.mostrar();
- 
-                        }
-                }
+
+                raiz.mostrar();
                 escaneador.close();
         }
  

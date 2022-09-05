@@ -1,16 +1,17 @@
+import java.util.ArrayList;
 import java.util.Scanner;
  
 public class Capitulo {
     String nome;
     String texto;
-    String[] escolhas;
+    ArrayList<Escolha> escolhas;
     Personagem personagem;
     int alteracaoEnergia;
     Scanner escaneador;
  
     Capitulo(String nome,
             String texto,
-            String[] escolhas,
+            
             Personagem personagem,
             int alteracaoEnergia,
             Scanner escaneador)
@@ -18,11 +19,12 @@ public class Capitulo {
     {
         this.nome = nome;
         this.texto = texto;
-        this.escolhas = escolhas;
+       
         this.personagem = personagem;
         this.alteracaoEnergia = alteracaoEnergia;
         this.escaneador = escaneador;
  
+        this.escolhas = new ArrayList<Escolha>();
     }
  
     void mostrar() {
@@ -30,15 +32,21 @@ public class Capitulo {
         System.out.println(this.texto);
         this.personagem.alterarEnergia(this.alteracaoEnergia);
  
-        if(this.escolhas != null){
+        if(this.escolhas.size() > 0){
  
-            for (String escolha : escolhas) {
+            for (Escolha escolha : escolhas) 
+            {
  
-                System.out.println("--" + escolha);
+                System.out.println("--" + escolha.texto);
             }
+        
+            int idEscolha = escolher();
+            this.escolhas.get(idEscolha).proximo.mostrar();
         }
- 
- 
+        
+        
+
+        
     }
  
     int escolher() {
@@ -50,8 +58,8 @@ public class Capitulo {
                 System.out.println("Digite sua Escolha:  ");
                 String escolhaDigitada = escaneador.nextLine();
  
-                for (int i = 0; i < escolhas.length; i++) {
-                    if (escolhaDigitada.equals(escolhas[i]))
+                for (int i = 0; i < escolhas.size(); i++) {
+                    if (escolhaDigitada.equals(escolhas.get(i).texto))
                     {
  
                         idEscolha = i;
